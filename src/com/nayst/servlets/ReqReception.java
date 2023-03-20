@@ -19,6 +19,6 @@ import java.io.IOException;
 public class ReqReception extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("request reception...");
+        System.out.println("req reception...");
     }
 }

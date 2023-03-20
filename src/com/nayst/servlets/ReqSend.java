@@ -19,8 +19,10 @@ import java.io.IOException;
 public class ReqSend extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("request forward...");
+        System.out.println("req send...");
         // TODO 服务器内部转发
-        req.getRequestDispatcher("ForwardReception").forward(req,resp);
+        // req.getRequestDispatcher("rec").forward(req,resp);
+        // TODO 服务器重定向
+        resp.sendRedirect("rec");
     }
 }
