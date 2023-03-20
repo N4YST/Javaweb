@@ -47,4 +47,22 @@
         <servlet-name>SessionSet</servlet-name>
         <url-pattern>/set</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ReqSend</servlet-name>
+        <servlet-class>com.nayst.servlets.ReqSend</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReqSend</servlet-name>
+        <url-pattern>/send</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ReqReception</servlet-name>
+        <servlet-class>com.nayst.servlets.ReqReception</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReqReception</servlet-name>
+        <url-pattern>/rec</url-pattern>
+    </servlet-mapping>
 </web-app>
