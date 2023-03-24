@@ -2,6 +2,7 @@ package com.nayst.servlets;
 
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -17,10 +18,12 @@ import java.io.IOException;
  * @Create: 2023/3/22 11:21
  * @Version: 1.0
  */
+@WebServlet("/demo05")
 public class Demo05 extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 1、向application保存作用域保存数据
+        // ServletContext：Servlet上下文
         ServletContext application = req.getServletContext();
         application.setAttribute("uname","lina");
 
@@ -28,7 +31,7 @@ public class Demo05 extends HttpServlet {
         resp.sendRedirect("demo06");
 
         // 3、服务器端转发
-        req.getRequestDispatcher("demo06").forward(req,resp);
+//        req.getRequestDispatcher("demo06").forward(req,resp);
 
     }
 }

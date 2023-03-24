@@ -22,6 +22,6 @@ public class Demo04 extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Object uname = req.getSession().getAttribute("uname");
-        System.out.println("uname=" + uname);
+        System.out.println("uname: " + uname);
     }
 }
