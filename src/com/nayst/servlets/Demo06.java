@@ -8,27 +8,17 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * ClassName: Life
+ * ClassName: Demo06
  * Package: com.nayst.servlets
  * Description:
- *
+ *      application
  * @Author: Nayst
- * @Create: 2023/2/3 14:34
+ * @Create: 2023/3/22 11:21
  * @Version: 1.0
  */
-public class Life extends HttpServlet {
-    @Override
-    public void init() throws ServletException {
-        System.out.println("正在初始化...");
-    }
-
+public class Demo06 extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("正在服务...");
-    }
 
-    @Override
-    public void destroy() {
-        System.out.println("正在销毁...");
     }
 }

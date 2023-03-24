@@ -1,6 +1,7 @@
 package com.nayst.servlets;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -8,27 +9,19 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * ClassName: Life
+ * ClassName: Demo04
  * Package: com.nayst.servlets
  * Description:
- *
+ *      session保存作用域取值
  * @Author: Nayst
- * @Create: 2023/2/3 14:34
+ * @Create: 2023/3/22 11:00
  * @Version: 1.0
  */
-public class Life extends HttpServlet {
-    @Override
-    public void init() throws ServletException {
-        System.out.println("正在初始化...");
-    }
-
+@WebServlet("/demo04")
+public class Demo04 extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("正在服务...");
-    }
-
-    @Override
-    public void destroy() {
-        System.out.println("正在销毁...");
+        Object uname = req.getSession().getAttribute("uname");
+        System.out.println("uname=" + uname);
     }
 }
